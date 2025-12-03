@@ -1,0 +1,42 @@
+@use "../helpers" as *;
+
+.button {
+  display: inline-block;
+  padding: rem(8) rem(32);
+  border-radius: rem(60);
+  color: #fff;
+  text-align: center;
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: 1.6;
+  border: rem(1) solid transparent;
+  transition: all 0.2s ease;
+  &--primary {
+    background: var(--primary-gradient);
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+  &--transparent {
+    border-color: #fff;
+    background-color: transparent;
+    @include hover {
+      background: var(--primary-gradient);
+      border-color: transparent;
+      opacity: 0.8;
+    }
+  }
+  &--accent {
+    border-radius: rem(77);
+    border: rem(9) solid #fff;
+    background: var(--primary-gradient);
+    padding: rem(54) rem(35);
+    font-size: rem(40);
+    font-weight: 700;
+    line-height: 1.325;
+    text-transform: uppercase;
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+}

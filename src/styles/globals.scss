@@ -1,0 +1,62 @@
+@use "helpers" as *;
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+.flexible-page {
+  --primary: #b24c5a;
+  --primary-light: #ffdede;
+  --primary-lighter: #f1e4e4;
+  --body-color: #3b3b3b;
+  --primary-gradient: linear-gradient(180deg, #b24c5a 0%, #944550 100%);
+  --seondary-gradient: linear-gradient(90deg, #249fcd 0%, #85bde6 100%);
+
+  --font-family-base: "Cabin", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+
+  --container-width: #{rem(1440)};
+  --container-padding-x: #{rem(20)};
+
+  font-family: var(--font-family-base);
+  color: var(--body-color);
+}
+
+.flexible-container {
+  max-width: var(--container-width);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.heading-xl {
+  font-size: fluid(36, 56);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading-lg {
+  font-size: fluid(32, 50);
+  font-weight: 700;
+  line-height: 1.2;
+  span {
+    color: #b24c5a;
+  }
+}
+
+.heading-md {
+  font-size: fluid(28, 40);
+  font-weight: 700;
+  line-height: 1.2;
+  span {
+    color: #b24c5a;
+  }
+}
+
+.heading-sm {
+  font-size: fluid(22, 30);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+
+
+@include large {
+  br {
+    display: none !important;
+  }
+}

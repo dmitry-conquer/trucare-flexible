@@ -1,0 +1,65 @@
+@use "../helpers" as *;
+
+.numeric-grid {
+  padding-block: fluid(40, 80) fluid(60, 120);
+  &__container {
+    max-width: rem(1220);
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: fluid(20, 36);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: fluid(12, 24);
+    counter-reset: item-counter;
+    @include medium {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include x-small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    min-height: rem(140);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-lighter);
+    padding: rem(13) rem(36);
+    border-radius: rem(30);
+    position: relative;
+    counter-increment: item-counter; 
+    &:nth-child(odd) {
+      background-color: var(--primary-light);
+    }
+    &::after {
+     color: #b24c5a;
+     opacity: 0.1;
+      content: counter(item-counter);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: rem(16);
+      font-size: rem(200);
+      line-height: 1;
+      @include large {
+        font-size: rem(130);
+      }
+    }
+  }
+
+  &__item-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: fluid(18, 24);
+    line-height: 1.6;
+    @include large {
+      line-height: 1.3;
+    }
+  }
+}
