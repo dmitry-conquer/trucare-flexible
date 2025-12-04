@@ -15,10 +15,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: fluid(12, 24);
     counter-reset: item-counter;
-    @include medium {
+    @include large {
       grid-template-columns: repeat(2, 1fr);
     }
-    @include x-small {
+    @include small {
       grid-template-columns: 1fr;
     }
   }

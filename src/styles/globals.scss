@@ -1,5 +1,5 @@
 @use "helpers" as *;
-// @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
 .flexible-page {
   --primary: #b24c5a;
   --primary-light: #ffdede;
@@ -30,7 +30,7 @@
 }
 
 .heading-lg {
-  font-size: fluid(32, 50);
+  font-size: fluid(30, 50);
   font-weight: 700;
   line-height: 1.2;
   span {
@@ -39,7 +39,7 @@
 }
 
 .heading-md {
-  font-size: fluid(28, 40);
+  font-size: fluid(26, 40);
   font-weight: 700;
   line-height: 1.2;
   span {

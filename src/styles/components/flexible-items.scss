@@ -1,0 +1,71 @@
+@use "../helpers" as *;
+
+.flexible-items {
+  padding-block: fluid(60, 120);
+  &__container {
+    max-width: rem(1220);
+    padding-inline: rem(20);
+    margin-inline: auto;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(16, 24);
+    align-items: center;
+    margin-bottom: fluid(20, 40);
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: fluid(16, 18);
+    line-height: 1.4;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fluid(18, 24);
+    justify-content: center;
+  }
+  &__item {
+    max-width: rem(774);
+    flex: 1 0 rem(377);
+
+    @include large {
+      max-width: 100%;
+      flex: 0 0 100%;
+      min-height: rem(140);
+    }
+  }
+}
+.flexible-item {
+  display: flex;
+  flex-direction: column;
+  gap: fluid(12, 18);
+  background-color: var(--primary-light);
+  border-radius: rem(30);
+  padding: fluid(24, 26) fluid(20, 40);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    max-width: rem(104);
+    max-height: rem(88);
+    width: 100%;
+    height: 100%;
+    bottom: rem(12);
+    right: rem(20);
+    background-image: url("/public/images/flexible-items.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &:nth-child(even) {
+    background-color: var(--primary-lighter);
+  }
+  &__title {
+    z-index: 2;
+  }
+  &__text {
+    font-size: fluid(16, 18);
+    z-index: 2;
+  }
+}
