@@ -12,7 +12,7 @@
   border: rem(1) solid transparent;
   transition: all 0.2s ease;
   &--primary {
-    background: var(--primary-gradient);
+    background: var(--seondary-gradient);
     @include hover {
       opacity: 0.8;
     }
@@ -21,7 +21,7 @@
     border-color: #fff;
     background-color: transparent;
     @include hover {
-      background: var(--primary-gradient);
+      background: var(--seondary-gradient);
       border-color: transparent;
       opacity: 0.8;
     }
@@ -29,7 +29,7 @@
   &--accent {
     border-radius: rem(77);
     border: rem(9) solid #fff;
-    background: var(--primary-gradient);
+    background: var(--seondary-gradient);
     padding: rem(54) rem(35);
     font-size: rem(40);
     font-weight: 700;

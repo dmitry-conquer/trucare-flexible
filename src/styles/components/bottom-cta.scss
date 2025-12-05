@@ -1,0 +1,45 @@
+@use "../helpers" as *;
+
+.bottom-cta {
+  &__container {
+    max-width: rem(1580);
+    margin-inline: auto;
+    padding-inline: rem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    background-color: var(--primary);
+    border-radius: rem(30);
+    padding: fluid(30, 111) fluid(20, 80);
+    flex: 0 1 rem(1020);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: fluid(20, 36);
+    @include large {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: fluid(16, 24);
+  }
+
+  &__image {
+    flex: 1 1 auto;
+    background-color: var(--primary-light);
+    padding: rem(102) rem(111) rem(123) rem(96);
+    border-radius: 0 rem(249) 0 0;
+    @include large {
+      display: none;
+    }
+  }
+}
