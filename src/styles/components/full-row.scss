@@ -10,6 +10,7 @@
     padding-top: rem(40);
   }
   &__container {
+    max-width: unset;
     padding-right: calc((100% - var(--container-width)) / 2);
     display: flex;
     gap: fluid(30, 55);

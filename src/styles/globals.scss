@@ -1,5 +1,5 @@
 @use "helpers" as *;
-@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
 .flexible-page {
   --primary: #b24c5a;
   --primary-light: #ffdede;
@@ -56,5 +56,19 @@
 @include large {
   br {
     display: none !important;
+  }
+}
+
+.spacer-section {
+  --desktop: 0;
+  --tablet: 0;
+  --mobile: 0;
+
+  height: var(--desktop);
+  @include medium {
+    height: var(--tablet);
+  }
+  @include small {
+    height: var(--mobile);
   }
 }

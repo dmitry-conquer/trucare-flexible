@@ -54,7 +54,7 @@
     height: 100%;
     bottom: rem(12);
     right: rem(20);
-    background-image: url("/public/images/flexible-items.png");
+    background-image: url("/images/trucare-icon.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -67,5 +67,6 @@
   &__text {
     font-size: fluid(16, 18);
     z-index: 2;
+    line-height: 1.4;
   }
 }
